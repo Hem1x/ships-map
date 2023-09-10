@@ -67,12 +67,15 @@ const Schedule: React.FC<ScheduleProps> = ({ setOpen }) => {
             </button>
           </div>
 
-          <Gantt
-            tasks={tasks}
-            locale="rus"
-            viewMode={ViewMode.Day}
-            onSelect={(e) => onSelectHandler(e)}
-          />
+          <div className="mb-10">
+            <Gantt
+              tasks={tasks}
+              locale="rus"
+              viewMode={ViewMode.Day}
+              ganttHeight={500}
+              onSelect={(e) => onSelectHandler(e)}
+            />
+          </div>
         </div>
         <ScheduleDrawer />
       </div>
